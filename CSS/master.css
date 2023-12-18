@@ -103,16 +103,16 @@ header .container ul {
   position: relative;
   margin-top: 20px;
   left: 50.5%;
-  top: 130%;
-  transform: translate(-50.5%, 130%);
+  top: 150%;
+  transform: translate(-50.5%, 190%);
   color: white;
   text-align: center;
   width: 320px;
   max-width: 100%;
-  -webkit-transform: translate(-50.5%, 130%);
-  -moz-transform: translate(-50.5%, 130%);
-  -ms-transform: translate(-50.5%, 130%);
-  -o-transform: translate(-50.5%, 130%);
+  -webkit-transform: translate(-50.5%, 150%);
+  -moz-transform: translate(-50.5%, 190%);
+  -ms-transform: translate(-50.5%, 190%);
+  -o-transform: translate(-50.5%, 190%);
 }
 .landing .intro-text h1 {
   margin: 0;
