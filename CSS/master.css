@@ -14,7 +14,7 @@
 }
 body {
   font-family: "Work Sans", sans-serif;
-  background-image: radial-gradient(black,rgb(31, 30, 30),black);
+  background-image: radial-gradient(black, rgb(31, 30, 30), black);
 }
 html {
   scroll-behavior: smooth;
@@ -33,9 +33,21 @@ a {
   color: white;
 }
 /* Medium devices (tablets, 768px and up) */
+@media (min-width: 368px) {
+  .container {
+    width: 414px;
+    margin: 0 20px;
+  }
+  .Portfolio .boxes {
+    flex-direction: column;
+  }
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
+  }
+  .Portfolio .boxes {
+    flex-direction: row;
   }
 }
 /* Large devices (desktops, 992px and up) */
@@ -53,11 +65,13 @@ a {
 /* End Global Rules */
 /* Start Header */
 .backgroundImage {
-  background-image: url("../Assets/sl_013020_27500_40 [Converted].png");
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 135vh;
   position: relative;
+}
+.backgroundImage > img {
+  position: absolute;
+  width: 100%;
+  top: 65px;
 }
 header {
   padding: 20px;
@@ -66,6 +80,10 @@ header {
   margin-top: -20px;
   z-index: 200;
   background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 header .container {
   display: flex;
@@ -77,24 +95,24 @@ header .container .logo {
 }
 header .container ul {
   display: flex;
-  gap: 55px;
+  gap: 20px;
 }
 /* End Header */
 /* Start Landing Section */
 .landing .intro-text {
   position: relative;
   margin-top: 20px;
-  left: 50%;
-  top: 105%;
-  transform: translate(-50%, 105%);
+  left: 50.5%;
+  top: 130%;
+  transform: translate(-50.5%, 130%);
   color: white;
   text-align: center;
   width: 320px;
   max-width: 100%;
-  -webkit-transform: translate(-50%, 105%);
-  -moz-transform: translate(-50%, 105%);
-  -ms-transform: translate(-50%, 105%);
-  -o-transform: translate(-50%, 105%);
+  -webkit-transform: translate(-50.5%, 130%);
+  -moz-transform: translate(-50.5%, 130%);
+  -ms-transform: translate(-50.5%, 130%);
+  -o-transform: translate(-50.5%, 130%);
 }
 .landing .intro-text h1 {
   margin: 0;
@@ -185,10 +203,14 @@ header .container ul {
 /* End About Section */
 /* Start Portfolio Section */
 .Portfolio {
-    margin-top: 250px;
-    text-align: center;
-    color: white;
-    width: 100%;
+  margin-top: 250px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .Portfolio .container a {
   font-size: 30px;
@@ -208,32 +230,32 @@ header .container ul {
   margin-top: -5px;
 }
 .Portfolio .boxes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .Portfolio .boxes .box {
-    width: 400px;
-    position: relative;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
+  width: 400px;
+  position: relative;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
-.Portfolio .boxes .box:hover img{
+.Portfolio .boxes .box:hover img {
   opacity: 30%;
 }
 .Portfolio .boxes .box img {
-    width: 100%;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
+  width: 100%;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 .Portfolio .boxes .box a h4 {
   display: none;
@@ -254,7 +276,7 @@ header .container ul {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-.Portfolio .boxes .box:hover a h4{
+.Portfolio .boxes .box:hover a h4 {
   display: block;
 }
 /* End Portfolio Section */
@@ -263,17 +285,21 @@ header .container ul {
   margin-top: 250px;
   color: white;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .Contact h1 {
-margin: 0;
-font-weight: bold;
-font-size: 40px;
-text-align: center;
+  margin: 0;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
 }
 .Contact p {
-font-size: 19px;
-line-height: 1.8;
-margin-top: -5px;
+  font-size: 19px;
+  line-height: 1.8;
+  margin-top: -5px;
 }
 .Contact .Contact-Fields {
   display: flex;
@@ -281,6 +307,19 @@ margin-top: -5px;
   flex-direction: column;
   gap: 20px;
   font-size: 30px;
+}
+@media (min-width: 368px) {
+  .Portfolio .container {
+    margin: 0;
+    margin-left: 13px;
+  }
+  .Contact .Contact-Fields {
+    display: flex;
+    margin: 30px 30px 0;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 30px;
+  }
 }
 .Contact .Contact-Fields div {
   display: flex;
@@ -303,6 +342,12 @@ margin-top: -5px;
 }
 /* End Contact Section */
 /* Start Footer Section */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 footer .container {
   text-align: center;
   margin-top: 40px;
